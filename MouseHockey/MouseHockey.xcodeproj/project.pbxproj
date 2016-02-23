@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F12FB1021C6567030037C1E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12FB1011C6567030037C1E8 /* AppDelegate.swift */; };
+		F12FB1041C6567030037C1E8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12FB1031C6567030037C1E8 /* GameScene.swift */; };
+		F12FB1061C6567030037C1E8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F12FB1051C6567030037C1E8 /* GameScene.sks */; };
+		F12FB1081C6567030037C1E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F12FB1071C6567030037C1E8 /* Assets.xcassets */; };
+		F12FB10B1C6567030037C1E8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F12FB1091C6567030037C1E8 /* MainMenu.xib */; };
+		F12FB1161C6567030037C1E8 /* MouseHockeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12FB1151C6567030037C1E8 /* MouseHockeyTests.swift */; };
+		F12FB1211C6567030037C1E8 /* MouseHockeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12FB1201C6567030037C1E8 /* MouseHockeyUITests.swift */; };
+		F12FB12F1C65673B0037C1E8 /* HockeyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12FB12E1C65673B0037C1E8 /* HockeyScene.swift */; };
+		F12FB1311C656C340037C1E8 /* Rink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12FB1301C656C340037C1E8 /* Rink.swift */; };
+		F17795781C7CF0BD00DA75C9 /* Puck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17795771C7CF0BD00DA75C9 /* Puck.swift */; };
+		F177957A1C7D048400DA75C9 /* Paddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17795791C7D048400DA75C9 /* Paddle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F12FB1121C6567030037C1E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F12FB0F61C6567030037C1E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F12FB0FD1C6567030037C1E8;
+			remoteInfo = MouseHockey;
+		};
+		F12FB11D1C6567030037C1E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F12FB0F61C6567030037C1E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F12FB0FD1C6567030037C1E8;
+			remoteInfo = MouseHockey;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F12FB0FE1C6567030037C1E8 /* MouseHockey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MouseHockey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12FB1011C6567030037C1E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F12FB1031C6567030037C1E8 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F12FB1051C6567030037C1E8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		F12FB1071C6567030037C1E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F12FB10A1C6567030037C1E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F12FB10C1C6567030037C1E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F12FB1111C6567030037C1E8 /* MouseHockeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MouseHockeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12FB1151C6567030037C1E8 /* MouseHockeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseHockeyTests.swift; sourceTree = "<group>"; };
+		F12FB1171C6567030037C1E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F12FB11C1C6567030037C1E8 /* MouseHockeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MouseHockeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12FB1201C6567030037C1E8 /* MouseHockeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseHockeyUITests.swift; sourceTree = "<group>"; };
+		F12FB1221C6567030037C1E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F12FB12E1C65673B0037C1E8 /* HockeyScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HockeyScene.swift; sourceTree = "<group>"; };
+		F12FB1301C656C340037C1E8 /* Rink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rink.swift; sourceTree = "<group>"; };
+		F17795771C7CF0BD00DA75C9 /* Puck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puck.swift; sourceTree = "<group>"; };
+		F17795791C7D048400DA75C9 /* Paddle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paddle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F12FB0FB1C6567030037C1E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F12FB10E1C6567030037C1E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F12FB1191C6567030037C1E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F12FB0F51C6567030037C1E8 = {
+			isa = PBXGroup;
+			children = (
+				F12FB1001C6567030037C1E8 /* MouseHockey */,
+				F12FB1141C6567030037C1E8 /* MouseHockeyTests */,
+				F12FB11F1C6567030037C1E8 /* MouseHockeyUITests */,
+				F12FB0FF1C6567030037C1E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F12FB0FF1C6567030037C1E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F12FB0FE1C6567030037C1E8 /* MouseHockey.app */,
+				F12FB1111C6567030037C1E8 /* MouseHockeyTests.xctest */,
+				F12FB11C1C6567030037C1E8 /* MouseHockeyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F12FB1001C6567030037C1E8 /* MouseHockey */ = {
+			isa = PBXGroup;
+			children = (
+				F12FB1011C6567030037C1E8 /* AppDelegate.swift */,
+				F12FB1051C6567030037C1E8 /* GameScene.sks */,
+				F12FB1031C6567030037C1E8 /* GameScene.swift */,
+				F12FB12E1C65673B0037C1E8 /* HockeyScene.swift */,
+				F12FB1301C656C340037C1E8 /* Rink.swift */,
+				F17795771C7CF0BD00DA75C9 /* Puck.swift */,
+				F17795791C7D048400DA75C9 /* Paddle.swift */,
+				F12FB1071C6567030037C1E8 /* Assets.xcassets */,
+				F12FB1091C6567030037C1E8 /* MainMenu.xib */,
+				F12FB10C1C6567030037C1E8 /* Info.plist */,
+			);
+			path = MouseHockey;
+			sourceTree = "<group>";
+		};
+		F12FB1141C6567030037C1E8 /* MouseHockeyTests */ = {
+			isa = PBXGroup;
+			children = (
+				F12FB1151C6567030037C1E8 /* MouseHockeyTests.swift */,
+				F12FB1171C6567030037C1E8 /* Info.plist */,
+			);
+			path = MouseHockeyTests;
+			sourceTree = "<group>";
+		};
+		F12FB11F1C6567030037C1E8 /* MouseHockeyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F12FB1201C6567030037C1E8 /* MouseHockeyUITests.swift */,
+				F12FB1221C6567030037C1E8 /* Info.plist */,
+			);
+			path = MouseHockeyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F12FB0FD1C6567030037C1E8 /* MouseHockey */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F12FB1251C6567030037C1E8 /* Build configuration list for PBXNativeTarget "MouseHockey" */;
+			buildPhases = (
+				F12FB0FA1C6567030037C1E8 /* Sources */,
+				F12FB0FB1C6567030037C1E8 /* Frameworks */,
+				F12FB0FC1C6567030037C1E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MouseHockey;
+			productName = MouseHockey;
+			productReference = F12FB0FE1C6567030037C1E8 /* MouseHockey.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F12FB1101C6567030037C1E8 /* MouseHockeyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F12FB1281C6567030037C1E8 /* Build configuration list for PBXNativeTarget "MouseHockeyTests" */;
+			buildPhases = (
+				F12FB10D1C6567030037C1E8 /* Sources */,
+				F12FB10E1C6567030037C1E8 /* Frameworks */,
+				F12FB10F1C6567030037C1E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F12FB1131C6567030037C1E8 /* PBXTargetDependency */,
+			);
+			name = MouseHockeyTests;
+			productName = MouseHockeyTests;
+			productReference = F12FB1111C6567030037C1E8 /* MouseHockeyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F12FB11B1C6567030037C1E8 /* MouseHockeyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F12FB12B1C6567030037C1E8 /* Build configuration list for PBXNativeTarget "MouseHockeyUITests" */;
+			buildPhases = (
+				F12FB1181C6567030037C1E8 /* Sources */,
+				F12FB1191C6567030037C1E8 /* Frameworks */,
+				F12FB11A1C6567030037C1E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F12FB11E1C6567030037C1E8 /* PBXTargetDependency */,
+			);
+			name = MouseHockeyUITests;
+			productName = MouseHockeyUITests;
+			productReference = F12FB11C1C6567030037C1E8 /* MouseHockeyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F12FB0F61C6567030037C1E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Kayhan Qaiser";
+				TargetAttributes = {
+					F12FB0FD1C6567030037C1E8 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					F12FB1101C6567030037C1E8 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = F12FB0FD1C6567030037C1E8;
+					};
+					F12FB11B1C6567030037C1E8 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = F12FB0FD1C6567030037C1E8;
+					};
+				};
+			};
+			buildConfigurationList = F12FB0F91C6567030037C1E8 /* Build configuration list for PBXProject "MouseHockey" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F12FB0F51C6567030037C1E8;
+			productRefGroup = F12FB0FF1C6567030037C1E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F12FB0FD1C6567030037C1E8 /* MouseHockey */,
+				F12FB1101C6567030037C1E8 /* MouseHockeyTests */,
+				F12FB11B1C6567030037C1E8 /* MouseHockeyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F12FB0FC1C6567030037C1E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F12FB1081C6567030037C1E8 /* Assets.xcassets in Resources */,
+				F12FB1061C6567030037C1E8 /* GameScene.sks in Resources */,
+				F12FB10B1C6567030037C1E8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F12FB10F1C6567030037C1E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F12FB11A1C6567030037C1E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F12FB0FA1C6567030037C1E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F12FB1041C6567030037C1E8 /* GameScene.swift in Sources */,
+				F12FB1311C656C340037C1E8 /* Rink.swift in Sources */,
+				F17795781C7CF0BD00DA75C9 /* Puck.swift in Sources */,
+				F177957A1C7D048400DA75C9 /* Paddle.swift in Sources */,
+				F12FB1021C6567030037C1E8 /* AppDelegate.swift in Sources */,
+				F12FB12F1C65673B0037C1E8 /* HockeyScene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F12FB10D1C6567030037C1E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F12FB1161C6567030037C1E8 /* MouseHockeyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F12FB1181C6567030037C1E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F12FB1211C6567030037C1E8 /* MouseHockeyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F12FB1131C6567030037C1E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F12FB0FD1C6567030037C1E8 /* MouseHockey */;
+			targetProxy = F12FB1121C6567030037C1E8 /* PBXContainerItemProxy */;
+		};
+		F12FB11E1C6567030037C1E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F12FB0FD1C6567030037C1E8 /* MouseHockey */;
+			targetProxy = F12FB11D1C6567030037C1E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F12FB1091C6567030037C1E8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F12FB10A1C6567030037C1E8 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F12FB1231C6567030037C1E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F12FB1241C6567030037C1E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F12FB1261C6567030037C1E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MouseHockey/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paddycrab.MouseHockey;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F12FB1271C6567030037C1E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MouseHockey/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paddycrab.MouseHockey;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F12FB1291C6567030037C1E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = MouseHockeyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paddycrab.MouseHockeyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MouseHockey.app/Contents/MacOS/MouseHockey";
+			};
+			name = Debug;
+		};
+		F12FB12A1C6567030037C1E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MouseHockeyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paddycrab.MouseHockeyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MouseHockey.app/Contents/MacOS/MouseHockey";
+			};
+			name = Release;
+		};
+		F12FB12C1C6567030037C1E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = MouseHockeyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paddycrab.MouseHockeyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MouseHockey;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F12FB12D1C6567030037C1E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MouseHockeyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paddycrab.MouseHockeyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MouseHockey;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F12FB0F91C6567030037C1E8 /* Build configuration list for PBXProject "MouseHockey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F12FB1231C6567030037C1E8 /* Debug */,
+				F12FB1241C6567030037C1E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F12FB1251C6567030037C1E8 /* Build configuration list for PBXNativeTarget "MouseHockey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F12FB1261C6567030037C1E8 /* Debug */,
+				F12FB1271C6567030037C1E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F12FB1281C6567030037C1E8 /* Build configuration list for PBXNativeTarget "MouseHockeyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F12FB1291C6567030037C1E8 /* Debug */,
+				F12FB12A1C6567030037C1E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F12FB12B1C6567030037C1E8 /* Build configuration list for PBXNativeTarget "MouseHockeyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F12FB12C1C6567030037C1E8 /* Debug */,
+				F12FB12D1C6567030037C1E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F12FB0F61C6567030037C1E8 /* Project object */;
+}
