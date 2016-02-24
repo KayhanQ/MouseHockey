@@ -52,6 +52,9 @@ class HockeyScene: SKScene {
     
     
     override func update(currentTime: NSTimeInterval) {
+        
+        puck.checkSpeed()
+        
         if (puck.collidesWithPaddle(paddle1)) {
             print("collides")
             puck.physicsBody?.applyImpulse(CGVectorMake((puck.physicsBody?.velocity.dx)!/100, (puck.physicsBody?.velocity.dy)!/100))

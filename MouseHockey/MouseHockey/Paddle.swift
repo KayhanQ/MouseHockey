@@ -38,7 +38,7 @@ class Paddle:SKNode {
         
         let physicsBody = SKPhysicsBody(circleOfRadius: radius)
         puck.fillColor = NSColor.blueColor()
-        physicsBody.friction = 0.0
+        physicsBody.friction = 0.1
         physicsBody.restitution = 1.0
         physicsBody.linearDamping = 0.0
         physicsBody.allowsRotation = false

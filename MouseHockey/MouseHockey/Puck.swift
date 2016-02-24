@@ -12,6 +12,8 @@ import SpriteKit
 class Puck:SKNode {
     
     let radius:CGFloat = 10
+    var minSpeed:CGFloat = 50
+    var maxSpeed:CGFloat! = 2000
     
     override init() {
         super.init()
@@ -28,9 +30,9 @@ class Puck:SKNode {
         
         let physicsBody = SKPhysicsBody(circleOfRadius: radius)
         puck.fillColor = NSColor.whiteColor()
-        physicsBody.friction = 0.0;
+        physicsBody.friction = 0.1;
         physicsBody.restitution = 1.0;
-        physicsBody.linearDamping = 0.4;
+        physicsBody.linearDamping = 0.6;
         physicsBody.allowsRotation = false;
 
         self.physicsBody = physicsBody
@@ -38,6 +40,19 @@ class Puck:SKNode {
         
     }
     
+    func checkSpeed() {
+        if (physicsBody?.velocity.length() > maxSpeed) {
+            print("over max speed")
+            physicsBody?.velocity.normalize()
+            physicsBody?.velocity *= maxSpeed
+        }
+        else if (physicsBody?.velocity.length() < minSpeed) {
+            print("under min speed")
+            physicsBody?.velocity.normalize()
+            physicsBody?.velocity *= minSpeed
+        }
+    }
+
     func collidesWithPaddle(paddle: Paddle) -> Bool {
         return (hypotf((Float) (paddle.position.x - self.position.x), (Float) (paddle.position.y - self.position.y)) < (Float)(paddle.radius+self.radius))
     }
