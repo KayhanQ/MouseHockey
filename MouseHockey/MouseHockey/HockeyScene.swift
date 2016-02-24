@@ -12,6 +12,7 @@ import SpriteKit
 class HockeyScene: SKScene {
     
     var paddle1:Paddle!
+    var puck:Puck!
     
     override func didMoveToView(view: SKView) {
         self.backgroundColor = SKColor(red: 0, green: 0, blue: 0, alpha: 0)
@@ -28,10 +29,12 @@ class HockeyScene: SKScene {
         let rink = Rink()
         self.addChild(rink)
         
-        let puck = Puck()
+        puck = Puck()
         puck.position = CGPoint(x: 200, y: 200)
         self.addChild(puck)
-        puck.physicsBody?.velocity = CGVectorMake(100, 100)
+        //puck.physicsBody?.velocity = CGVectorMake(100, 100)
+        puck.physicsBody?.applyImpulse(CGVectorMake(1, 1))
+        print(puck.physicsBody?.velocity)
         
         paddle1 = Paddle()
         self.addChild(paddle1)
@@ -39,14 +42,20 @@ class HockeyScene: SKScene {
     }
     
     override func mouseMoved(event: NSEvent) {
-        print("mouseMoved")
         let location = event.locationInNode(self)
-        print(location)
+        //print(location)
         
         paddle1.position = event.locationInNode(self)
         
         
     }
     
-
+    
+    override func update(currentTime: NSTimeInterval) {
+        if (puck.collidesWithPaddle(paddle1)) {
+            print("collides")
+            puck.physicsBody?.applyImpulse(CGVectorMake((puck.physicsBody?.velocity.dx)!/100, (puck.physicsBody?.velocity.dy)!/100))
+            
+        }
+    }
 }

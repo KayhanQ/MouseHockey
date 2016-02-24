@@ -30,12 +30,16 @@ class Puck:SKNode {
         puck.fillColor = NSColor.whiteColor()
         physicsBody.friction = 0.0;
         physicsBody.restitution = 1.0;
-        physicsBody.linearDamping = 0.0;
+        physicsBody.linearDamping = 0.4;
         physicsBody.allowsRotation = false;
 
         self.physicsBody = physicsBody
         self.addChild(puck)
         
+    }
+    
+    func collidesWithPaddle(paddle: Paddle) -> Bool {
+        return (hypotf((Float) (paddle.position.x - self.position.x), (Float) (paddle.position.y - self.position.y)) < (Float)(paddle.radius+self.radius))
     }
 
 
