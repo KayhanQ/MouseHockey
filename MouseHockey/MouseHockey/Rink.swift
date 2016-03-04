@@ -11,6 +11,9 @@ import SpriteKit
 
 class Rink:SKNode {
     
+    var leftGoalX: CGFloat!
+    var rightGoalX: CGFloat!
+    
     override init() {
         super.init()
         
@@ -36,6 +39,9 @@ class Rink:SKNode {
         let tR:CGPoint = CGPoint(x: xMargin + width, y: yMargin + height)
         let bL:CGPoint = CGPoint(x: xMargin, y: yMargin)
         let bR:CGPoint = CGPoint(x: xMargin + width, y: yMargin)
+
+        leftGoalX = tL.x - 20
+        rightGoalX = tR.x + 20
 
         let gtY:CGFloat = screenHeight/2 + goalSize/2
         let gbY:CGFloat = screenHeight/2 - goalSize/2
@@ -66,6 +72,23 @@ class Rink:SKNode {
         bottom.physicsBody?.friction = 0
         
         
+        
+        
+//        
+//        let gMX: CGFloat = 20
+//        let gDHeight: CGFloat = 30 + goalSize
+//
+//        let lGDPath = CGPathCreateMutable();
+//        CGPathMoveToPoint(lGDPath, nil, xMargin - gMX, screenHeight/2 - gDHeight/2)
+//        CGPathAddLineToPoint(lGDPath, nil, xMargin - gMX, screenHeight/2 + gDHeight/2)
+//
+//        let lGD = SKShapeNode(path: lGDPath)
+//        lGD.name = "leftGoal"
+//        self.addChild(lGD)
+//        lGD.physicsBody = SKPhysicsBody(edgeChainFromPath: lGDPath)
+//        lGD.physicsBody?.friction = 0
+//        
+//        
 //        let border = SKShapeNode(rect: CGRect(x: 100, y: 100, width: width, height: height))
 //        border.strokeColor = NSColor.whiteColor()
 //        self.addChild(border)

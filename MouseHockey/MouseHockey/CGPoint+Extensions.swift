@@ -243,3 +243,10 @@ public func /= (inout left: CGPoint, right: CGVector) {
 public func lerp(start start: CGPoint, end: CGPoint, t: CGFloat) -> CGPoint {
   return start + (end - start) * t
 }
+
+public func randPointInRect(rect rect: CGRect) -> CGPoint {
+    let x = CGFloat.random(min: rect.origin.x, max: rect.origin.x + rect.width)
+    let y = CGFloat.random(min: rect.origin.y, max: rect.origin.x + rect.height)
+
+    return CGPoint(x: x, y: y)
+}

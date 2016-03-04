@@ -11,6 +11,7 @@ import SpriteKit
 
 class HockeyScene: SKScene {
     
+    var rink: Rink!
     var puck:Puck!
     var player1:Player!
     var player2:Player!
@@ -27,7 +28,7 @@ class HockeyScene: SKScene {
     }
 
     func setup() {
-        let rink = Rink()
+        rink = Rink()
         self.addChild(rink)
         
         puck = Puck()
@@ -56,10 +57,30 @@ class HockeyScene: SKScene {
         
     }
     
+    func goalScoredBy(player: Player) {
+        puck.physicsBody?.velocity = CGVector.zero
+        puck.position = CGPoint(x: 400, y: 400)
+        
+        
+    }
     
     override func update(currentTime: NSTimeInterval) {
         
         puck.checkSpeed()
+        
+//        
+//        if (puck.intersectsNode(self.childNodeWithName("leftGoal")!)) {
+//            goalScoredBy()
+//        }
+        
+        if (puck.position.x < rink.leftGoalX) {
+            goalScoredBy(player1)
+        }
+        else if (puck.position.x > rink.rightGoalX) {
+            goalScoredBy(player2)
+
+        }
+        
         
         if (puck.collidesWithPaddle(player1.paddle)) {
             print("collides")

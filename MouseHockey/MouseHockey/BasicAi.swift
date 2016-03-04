@@ -15,6 +15,9 @@ class BasicAi:NSObject {
     var home: CGPoint!
     let speedFactor: CGFloat = 500
     
+    let homeRect = CGRect(x: 100, y: 200, width: 100, height: 400)
+    let tolerance: CGFloat = 10
+    
     convenience init(paddle: Paddle) {
         self.init()
         
@@ -29,11 +32,17 @@ class BasicAi:NSObject {
             
             paddle.physicsBody?.velocity = vec * speedFactor
             
+            home = randPointInRect(rect: homeRect)
         }
         else {
-            var vec = CGVectorMake(home.x - paddle.position.x, home.y - paddle.position.y)
-            vec.normalize()
-            paddle.physicsBody?.velocity = vec * speedFactor
+            if (paddle.position.distanceTo(home) > tolerance) {
+                var vec = CGVectorMake(home.x - paddle.position.x, home.y - paddle.position.y)
+                vec.normalize()
+                paddle.physicsBody?.velocity = vec * speedFactor
+            }
+            else {
+                paddle.physicsBody?.velocity = CGVector.zero
+            }
 
         }
     }

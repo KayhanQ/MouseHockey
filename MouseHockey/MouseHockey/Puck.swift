@@ -11,7 +11,7 @@ import SpriteKit
 
 class Puck:SKNode {
     
-    let radius:CGFloat = 10
+    let radius:CGFloat = 15
     var minSpeed:CGFloat = 50
     var maxSpeed:CGFloat! = 2000
     
