@@ -15,6 +15,8 @@ class Paddle:SKNode {
     var previousPosition: CGPoint = CGPoint(x: 0, y: 0)
     var lVelocity = CGVectorMake(0, 0)
     
+    private var paddle: SKShapeNode!
+    
     override init() {
         super.init()
         
@@ -34,10 +36,10 @@ class Paddle:SKNode {
     }
     
     func setup() {
-        let puck = SKShapeNode(circleOfRadius: radius)
+        paddle = SKShapeNode(circleOfRadius: radius)
         
         let physicsBody = SKPhysicsBody(circleOfRadius: radius)
-        puck.fillColor = NSColor.blueColor()
+        paddle.fillColor = NSColor.blueColor()
         physicsBody.friction = 0.1
         physicsBody.restitution = 1.0
         physicsBody.linearDamping = 0.0
@@ -45,10 +47,13 @@ class Paddle:SKNode {
         physicsBody.dynamic = false
         self.physicsBody = physicsBody
         
-        self.addChild(puck)
+        self.addChild(paddle)
         
         
     }
     
+    func setColor(color: NSColor) {
+        paddle.fillColor = color
+    }
     
 }

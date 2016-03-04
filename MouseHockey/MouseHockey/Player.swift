@@ -7,3 +7,22 @@
 //
 
 import Foundation
+import SpriteKit
+
+class Player:SKNode {
+    
+    var gName: String!
+    var paddle: Paddle!
+    var isAi: Bool!
+    
+    convenience init(gName:String, paddle:Paddle, isAi:Bool) {
+        self.init()
+
+        self.gName = gName
+        self.paddle = paddle
+        self.isAi = isAi
+        
+    }
+
+
+}
