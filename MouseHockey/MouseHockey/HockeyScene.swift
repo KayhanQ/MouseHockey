@@ -44,7 +44,7 @@ class HockeyScene: SKScene {
         player2 = Player(gName: "Player 2", paddle: Paddle(), isAi: true)
         self.addChild(player2.paddle)
         player2.paddle.setColor(NSColor.redColor())
-        
+        player2.paddle.position = CGPoint(x: 200, y: 200)
     }
     
     override func mouseMoved(event: NSEvent) {
@@ -64,7 +64,11 @@ class HockeyScene: SKScene {
         if (puck.collidesWithPaddle(player1.paddle)) {
             print("collides")
             puck.physicsBody?.applyImpulse(CGVectorMake((puck.physicsBody?.velocity.dx)!/100, (puck.physicsBody?.velocity.dy)!/100))
-            
         }
+        
+        if (player2.isAi) {
+            player2.updateState(puck)
+        }
+        
     }
 }

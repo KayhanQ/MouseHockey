@@ -57,5 +57,11 @@ class Puck:SKNode {
         return (hypotf((Float) (paddle.position.x - self.position.x), (Float) (paddle.position.y - self.position.y)) < (Float)(paddle.radius+self.radius))
     }
 
-
+    func isOnLeft() -> Bool {
+        return self.position.x < 500
+    }
+    
+    
+    
+    
 }
